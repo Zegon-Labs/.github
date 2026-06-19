@@ -23,9 +23,10 @@ Built on **0G** (Compute + Chain + Storage) for the **Zero Cup 2026** hackathon.
 
 ### ⭐️ Our Projects
 
-| [**🤠 ZEGON DApp**][dapp-github]<br/>Turn-based duel vs a blindfolded AI with sealed inference on 0G Compute. Commit-reveal on Galileo, Blindsight meter, VERIFY flow — no wallet required.<br/><br/>[![][game-shield]][game-link] [![][contract-shield]][contract-link] | <picture><img src="https://raw.githubusercontent.com/Zegon-Labs/Zegon-DApp/main/Public/logo_zegon.png" alt="ZEGON" width="200" /></picture> |
-| :--- | :---: |
-| [**🌐 ZEGON Landing**][landing-github]<br/>Official marketing site — the provably fair AI gaming use case, commit flow preview, 0G stack breakdown, FAQ, and launch overlay into the dapp.<br/><br/>[![][website-shield]][website-link] | <picture><img src="https://raw.githubusercontent.com/Zegon-Labs/Zegon-Landing/main/Public/banner.png" alt="ZEGON Landing" width="300" /></picture> |
+| Project | Description |
+| :--- | :--- |
+| [**🤠 ZEGON DApp**][dapp-github] | Turn-based duel vs a blindfolded AI with sealed inference on 0G Compute. Commit-reveal on Galileo, Blindsight meter, VERIFY flow — no wallet required.<br/><br/>[![][game-shield]][game-link] [![][contract-shield]][contract-link] |
+| [**🌐 ZEGON Landing**][landing-github] | Official marketing site — the provably fair AI gaming use case, commit flow preview, 0G stack breakdown, FAQ, and launch overlay into the dapp.<br/><br/>[![][website-shield]][website-link] |
 
 ### 📦 Ecosystem
 
@@ -104,13 +105,6 @@ We welcome PRs, bug reports, and gameplay feedback across every public repositor
 - **0G integration** — improve Compute prompts, chain flows, or Storage persistence in `game-server`.
 - **Visual / UX** — Phaser scenes, glitch shaders, or landing sections in their respective repos.
 - **Docs** — full design spec lives in [`ZEGON.md`][zegon-spec] inside Zegon-DApp.
-
-<a href="https://next.ossinsight.io/analyze/Zegon-Labs#overview" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-org-active-contributors/thumbnail.png?activity=active&period=past_90_days&owner_id=294982047&image_size=2x3&color_scheme=dark">
-    <img src="https://next.ossinsight.io/widgets/official/compose-org-active-contributors/thumbnail.png?activity=active&period=past_90_days&owner_id=294982047&image_size=2x3&color_scheme=light">
-  </picture>
-</a>
 
 ### 🪪 License
 
