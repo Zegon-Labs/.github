@@ -119,26 +119,26 @@ Per-repository. See individual repositories for license details.
 <!-- LINK GROUP -->
 
 [website-link]: https://zegon-landing.vercel.app
-[website-shield]: https://img.shields.io/badge/website-zegon--landing.vercel.app-FF4D2E?labelColor=0A0911&style=flat-square&logo=safari&logoColor=white
+[website-shield]: https://img.shields.io/badge/website-zegon--landing.vercel.app-B3122B?labelColor=0A0911&style=flat-square&logo=safari&logoColor=white
 
 [game-link]: https://zegon-dapp.vercel.app
-[game-shield]: https://img.shields.io/badge/play-zegon--dapp.vercel.app-2EE6D6?labelColor=0A0911&style=flat-square&logo=gamepad&logoColor=white
+[game-shield]: https://img.shields.io/badge/play-zegon--dapp.vercel.app-B3122B?labelColor=0A0911&style=flat-square&logo=gamepad&logoColor=white
 
 [github-link]: https://github.com/Zegon-Labs
-[github-star]: https://img.shields.io/github/stars/Zegon-Labs?color=E8B23A&labelColor=0A0911&style=flat-square&logo=github
+[github-star]: https://img.shields.io/github/stars/Zegon-Labs?color=B3122B&labelColor=0A0911&style=flat-square&logo=github
 
 [og-link]: https://0g.ai
-[og-shield]: https://img.shields.io/badge/built%20on-0G-FF2E88?labelColor=0A0911&style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8+PC9zdmc+&logoColor=white
+[og-shield]: https://img.shields.io/badge/built%20on-0G-B3122B?labelColor=0A0911&style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8+PC9zdmc+&logoColor=white
 
 [dapp-github]: https://github.com/Zegon-Labs/Zegon-DApp
 [landing-github]: https://github.com/Zegon-Labs/Zegon-Landing
 
 [contract-link]: https://chainscan-galileo.0g.ai/address/0x2Fc47e82c30B9d1B9193fa1978E96A92d7b760b0
-[contract-shield]: https://img.shields.io/badge/contract-Galileo-4DF07A?labelColor=0A0911&style=flat-square&logo=ethereum&logoColor=white
+[contract-shield]: https://img.shields.io/badge/contract-Galileo-B3122B?labelColor=0A0911&style=flat-square&logo=ethereum&logoColor=white
 
 [explorer-link]: https://chainscan-galileo.0g.ai
 [faucet-link]: https://faucet.0g.ai
 [zegon-spec]: https://github.com/Zegon-Labs/Zegon-DApp/blob/main/ZEGON.md
 
-[lang-typescript]: https://img.shields.io/badge/typescript-3178C6?labelColor=0A0911&style=flat-square&logo=typescript&logoColor=white
-[lang-solidity]: https://img.shields.io/badge/solidity-363636?labelColor=0A0911&style=flat-square&logo=solidity&logoColor=white
+[lang-typescript]: https://img.shields.io/badge/typescript-B3122B?labelColor=0A0911&style=flat-square&logo=typescript&logoColor=white
+[lang-solidity]: https://img.shields.io/badge/solidity-B3122B?labelColor=0A0911&style=flat-square&logo=solidity&logoColor=white
