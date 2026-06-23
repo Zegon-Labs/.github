@@ -1,15 +1,13 @@
-<a name="readme-top"></a>
-
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Zegon-Labs/.github/main/assets/banner.png" alt="ZEGON — It can't see you. It reads you." width="100%" />
+<img src="../assets/banner.png" alt="ZEGON — Outdraw the Blind" width="100%" />
 
-<br/>
+<br /><br />
 
-[![][website-shield]][website-link]
-[![][game-shield]][game-link]
-[![][github-star]][github-link]
-[![][og-shield]][og-link]
+[![website][website-shield]][website-link]
+[![play][game-shield]][game-link]
+[![github stars][github-star]][github-link]
+[![built on 0G][og-shield]][og-link]
 
 </div>
 
@@ -25,8 +23,8 @@ Built on **0G** (Compute + Chain + Storage) for the **Zero Cup 2026** hackathon.
 
 | Project | Description |
 | :--- | :--- |
-| [**🤠 ZEGON DApp**][dapp-github] | Turn-based duel vs a blindfolded AI with sealed inference on 0G Compute. Commit-reveal on Galileo, Blindsight meter, VERIFY flow — no wallet required.<br/><br/>[![][game-shield]][game-link] [![][contract-shield]][contract-link] |
-| [**🌐 ZEGON Landing**][landing-github] | Official marketing site — the provably fair AI gaming use case, commit flow preview, 0G stack breakdown, FAQ, and launch overlay into the dapp.<br/><br/>[![][website-shield]][website-link] |
+| [**🤠 ZEGON DApp**][dapp-github] | Turn-based duel vs a blindfolded AI with sealed inference on 0G Compute. Commit-reveal on Galileo, read-streak / DEADEYE, items, tutorial, daily pool, global leaderboard, VERIFY flow. Play free — wallet only at the end for ranking. [![][game-shield]][game-link] [![][contract-shield]][contract-link] |
+| [**🌐 ZEGON Landing**][landing-github] | Official marketing site — provably fair AI gaming, commit flow preview, 0G stack breakdown, FAQ, and launch overlay into the dapp. [![][website-shield]][website-link] |
 
 ### 📦 Ecosystem
 
@@ -34,10 +32,10 @@ Built on **0G** (Compute + Chain + Storage) for the **Zero Cup 2026** hackathon.
 | :--- | :--- | :---: |
 | [**🎮 Zegon-DApp**][dapp-github] | Monorepo — Phaser 3 client, Node API, Solidity contracts, full 0G integration | ![][lang-typescript] |
 | [**🌐 Zegon-Landing**][landing-github] | Vite + React landing page with dark neo-western glitch design system | ![][lang-typescript] |
-| `packages/game-core` | Pure duel logic — combat, Blindsight, weapons, validation | ![][lang-typescript] |
-| `packages/game-client` | Phaser 3 + Vite game client (426×240 pixel-art, CRT glitch shaders) | ![][lang-typescript] |
-| `packages/game-server` | Node API — 0G Compute inference, chain commit-reveal, Storage uploads, gas sponsorship | ![][lang-typescript] |
-| `contracts/` | `ZegonDuel.sol` on Galileo testnet — `commitMove` → `revealMove` → `recordDuel` | ![][lang-solidity] |
+| `packages/game-core` | Pure duel logic — combat, read streak, DEADEYE, items, archetypes, scoring | ![][lang-typescript] |
+| `packages/game-client` | Phaser 3 + Vite client (1280×720, sprite HUD, tutorial, i18n EN/ES) | ![][lang-typescript] |
+| `packages/game-server` | Node API — 0G Compute inference, chain commit-reveal, Storage uploads, daily pool, leaderboard | ![][lang-typescript] |
+| `contracts/` | `ZegonDuel.sol`, `ZegonLeaderboard.sol`, `ZegonDailyPool.sol` on Galileo | ![][lang-solidity] |
 
 ### 🏗️ How It Fits Together
 
@@ -62,10 +60,10 @@ Built on **0G** (Compute + Chain + Storage) for the **Zero Cup 2026** hackathon.
               └───────────────┴───────────────┘
                               │
                     VERIFY after every duel
-                    (timestamp + attestation)
+                    (session token + on-chain fallback)
 ```
 
-**Per-round flow:** ZEGON receives only your action history → sealed inference on 0G Compute → `commitMove(hash)` on-chain **before** your buttons unlock → you choose blind → `revealMove` → resolve → Blindsight updates. After the duel: `recordDuel` + blob upload to 0G Storage → **VERIFY ON-CHAIN** at `/api/duel/verify/:duelId`.
+**Per-round flow:** ZEGON receives only your action history → sealed inference on 0G Compute → `commitMove(hash)` on-chain **before** your buttons unlock → you choose **FIRE**, **DODGE**, or an item → `revealMove` → resolve damage (5 lives) → read streak updates. After the duel: `recordDuel` + blob upload to 0G Storage → **VERIFY ON-CHAIN** at `/api/duel/verify/:duelId`.
 
 ### 🎯 What Makes ZEGON Different
 
@@ -80,31 +78,37 @@ Built on **0G** (Compute + Chain + Storage) for the **Zero Cup 2026** hackathon.
 
 **The wedge:** provably fair today covers RNG (dice, casino). ZEGON applies it to **AI decisions with hidden information** — sealed inference proves the model only saw your history; commit-reveal proves it locked in before you moved.
 
-### ⚔️ Core Gameplay
+### ⚔️ Core Gameplay (current build)
 
-- **Actions:** `FIRE_HIGH`, `FIRE_LOW`, `DODGE`, `FEINT`, `RELOAD` — simultaneous selection, turn-based to hide inference latency.
-- **Blindsight:** ZEGON's blindfold meter rises when it predicts you correctly; drops when you surprise it or feint. At max → **DEADEYE** (guaranteed lethal read).
-- **Weapons:** Revolver (balanced), Shotgun (high damage, high pattern noise), Derringer (fast, evasive), Glitch Pistol (rare — low readability).
-- **No wallet:** backend sponsors gas on Galileo testnet so anyone can play.
+- **Actions:** `FIRE`, `DODGE`, and one-click **items** — Smoke (break read), Plate (block shot), Mirror (reflect).
+- **Read streak:** 2/2 ticks in the header HUD → **DEADEYE** (lethal read if ZEGON predicted you).
+- **5 lives** shown as hearts/skulls — no opaque HP numbers.
+- **Tutorial:** 9 lessons + 6 guided practice rounds before your first real duel.
+- **Modes:** Standard (ZEGON archetypes) and **Daily duel** with on-chain stake pool.
+- **Wallet optional:** play free; connect at the end to submit your best score to the global leaderboard.
+- **i18n:** English and Spanish, including in-game settings mid-duel.
 
 ### 🔗 On-Chain (Galileo testnet)
 
 | | |
 | :--- | :--- |
-| **Contract** | [`0x2Fc47e82c30B9d1B9193fa1978E96A92d7b760b0`][contract-link] |
+| **ZegonDuel** | [`0x2Fc47e82c30B9d1B9193fa1978E96A92d7b760b0`][contract-link] |
+| **ZegonDailyPool** | [`0xF0011177988a323d2dFE4CFD29D2dFC2199F44ea`][pool-link] |
 | **Chain ID** | `16602` |
 | **RPC** | `https://evmrpc-testnet.0g.ai` |
 | **Explorer** | [chainscan-galileo.0g.ai][explorer-link] |
 | **Faucet** | [faucet.0g.ai][faucet-link] |
 
+Backend sponsors gas on testnet so anyone can play without a wallet.
+
 ### 🤝 Contributing
 
 We welcome PRs, bug reports, and gameplay feedback across every public repository.
 
-- **Game logic** — extend `packages/game-core` (combat rules, weapons, modes).
+- **Game logic** — extend `packages/game-core` (combat rules, items, modes).
 - **0G integration** — improve Compute prompts, chain flows, or Storage persistence in `game-server`.
-- **Visual / UX** — Phaser scenes, glitch shaders, or landing sections in their respective repos.
-- **Docs** — full design spec lives in [`ZEGON.md`][zegon-spec] inside Zegon-DApp.
+- **Visual / UX** — Phaser scenes, HUD, tutorial, or landing sections in their respective repos.
+- **Docs** — pitch source in [`ZERO_CUP_PITCH.md`][pitch-doc] inside Zegon-DApp.
 
 ### 🪪 License
 
@@ -112,11 +116,9 @@ Per-repository. See individual repositories for license details.
 
 ---
 
-> \[!TIP]
+> [!TIP]
 >
-> **Play now:** [Launch ZEGON][game-link] → duel the blind AI → hit **VERIFY ON-CHAIN** after the fight. Fair dice already exist. ZEGON proves the *mind* is fair.
-
-<!-- LINK GROUP -->
+> **Play now:** [Launch ZEGON][game-link] → complete the tutorial → duel the blind AI → hit **VERIFY ON-CHAIN** after the fight. Fair dice already exist. ZEGON proves the *mind* is fair.
 
 [website-link]: https://zegon-landing.vercel.app
 [website-shield]: https://img.shields.io/badge/website-zegon--landing.vercel.app-B3122B?labelColor=0A0911&style=flat-square&logo=safari&logoColor=white
@@ -134,11 +136,12 @@ Per-repository. See individual repositories for license details.
 [landing-github]: https://github.com/Zegon-Labs/Zegon-Landing
 
 [contract-link]: https://chainscan-galileo.0g.ai/address/0x2Fc47e82c30B9d1B9193fa1978E96A92d7b760b0
+[pool-link]: https://chainscan-galileo.0g.ai/address/0xF0011177988a323d2dFE4CFD29D2dFC2199F44ea
 [contract-shield]: https://img.shields.io/badge/contract-Galileo-B3122B?labelColor=0A0911&style=flat-square&logo=ethereum&logoColor=white
 
 [explorer-link]: https://chainscan-galileo.0g.ai
 [faucet-link]: https://faucet.0g.ai
-[zegon-spec]: https://github.com/Zegon-Labs/Zegon-DApp/blob/main/ZEGON.md
+[pitch-doc]: https://github.com/Zegon-Labs/Zegon-DApp/blob/main/ZERO_CUP_PITCH.md
 
 [lang-typescript]: https://img.shields.io/badge/typescript-B3122B?labelColor=0A0911&style=flat-square&logo=typescript&logoColor=white
 [lang-solidity]: https://img.shields.io/badge/solidity-B3122B?labelColor=0A0911&style=flat-square&logo=solidity&logoColor=white
