@@ -6,6 +6,7 @@
 
 [![website][website-shield]][website-link]
 [![play][game-shield]][game-link]
+[![pitch deck][pitch-deck-shield]][pitch-deck-link]
 [![github stars][github-star]][github-link]
 [![built on 0G][og-shield]][og-link]
 
@@ -108,7 +109,7 @@ We welcome PRs, bug reports, and gameplay feedback across every public repositor
 - **Game logic** — extend `packages/game-core` (combat rules, items, modes).
 - **0G integration** — improve Compute prompts, chain flows, or Storage persistence in `game-server`.
 - **Visual / UX** — Phaser scenes, HUD, tutorial, or landing sections in their respective repos.
-- **Docs** — pitch source in [`ZERO_CUP_PITCH.md`][pitch-doc] inside Zegon-DApp.
+- **Docs** — [pitch deck][pitch-deck-link] (Google Slides) and source in [`ZERO_CUP_PITCH.md`][pitch-doc] inside Zegon-DApp.
 
 ### 🪪 License
 
@@ -125,6 +126,9 @@ Per-repository. See individual repositories for license details.
 
 [game-link]: https://zegon-dapp.vercel.app
 [game-shield]: https://img.shields.io/badge/play-zegon--dapp.vercel.app-B3122B?labelColor=0A0911&style=flat-square&logo=gamepad&logoColor=white
+
+[pitch-deck-link]: https://docs.google.com/presentation/d/1npdsrT1VKBF6LBZZMf3f_ZcE2OP6QAtw/view?usp=sharing
+[pitch-deck-shield]: https://img.shields.io/badge/pitch%20deck-view-B3122B?labelColor=0A0911&style=flat-square&logo=googleslides&logoColor=white
 
 [github-link]: https://github.com/Zegon-Labs
 [github-star]: https://img.shields.io/github/stars/Zegon-Labs?color=B3122B&labelColor=0A0911&style=flat-square&logo=github
